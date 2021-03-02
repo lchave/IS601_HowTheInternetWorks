@@ -52,38 +52,39 @@
 
     <div class="container align-content-center">
         <div>
-          <p class="h2 text-center"></br>The Internet - Packets, Routing, and Reliability</p>
+          <p class="h2 text-center"></br>HTTP & HTTPS</p>
           <p><br/></p>
-          <p>The internet is formed by multiple independent networks connected to each other. There are also multiple ways of transmitting data within the internet, however, what is the actual process in order to send and receive such data?</p>
-          <p class="h3"><br/>Packets</p>
+          <p>When you open a web browser and type in a <b><i>URL (Uniform Resource Locator)</i></b> your computer sends a request to a server that could be located anywhere in the globe. Within milliseconds this server replies with a website. During this process both the client and server computer are using the <b><i>HyperText Transfer Protocol (HTTP)</i></b> to communicate with each other. HTTP is the language used between web browsers and servers to manage the sending and receiving of web files over the internet</p>
+          <p class="h3"><br/>GET Request</p>
           <div class="row">
             <div class="col-sm-5 col-md-6">
-                <p><br/>Any type of digital information in the internet is sent via packets. A packet contains the information you would like to send along with the destination IP address and a source IP address. Just like all the data in the internet a packet is formed by bits, however, there might be files that you would like to share that are too big in order to fit in a single packet, therefore, this data is chopped into multiple packets and sent through the network. Whenever the packets arrive at the destination, they are sorted out and put together in order to reconstruct the original data. Information on the internet does not need to follow a fixed path. When a packet is sent, it could take a completely different route to reach its destination every single time.</p>
+                <p><br/>This communication process is very straightforward, the client sends a GET request which is formed by the word GET and the name of the document the client needs from the server and the server replies with such document.</p>
             </div>
             <div  class="col-sm-5 col-md-6">
-                <img src="Images/packets.png" class="w-75" alt="Packets">
+                <img src="Images/get.png" class="w-75" alt="get">
             </div>
           </div>
-          <p class="h3"><br/>Routers</p>
+          <p class="h3"><br/>POST Request</p>
           <div class="row">
             <div  class="col-sm-5 col-md-6">
-                <img src="Images/routers.png" class="w-75" alt="Routers">
+                <img src="Images/post.png" class="w-75" alt="post">
             </div>
             <div class="col-sm-5 col-md-6">
-                <p><br/>Routers are special computers that act like traffic managers and keep packets moving through the internet. A router keeps track of multiple routes for sending packets, when the network is congested routers might change the path that a packet is following in order to ensure it reaches the destination. This decision is made by choosing the cheapest available route for each packet, cheapest meaning the path that will take the shortest time and also considering the known routes.</p>
-            </div>
-          </div>
-          <p class="h3"><br/>Reliability</p>
-          <div class="row">
-            <div class="col-sm-5 col-md-6">
-                <p><br/>Due to its distributed design, the internet is fault tolerant. Even if one of the paths to transmit data fails then the data can still reach its destination by following a different path. Along with this distributed design, there are also other protocols that ensure the reliability of the data being sent and received, like the Transmission Control Protocol (TCP). TCP keeps track of all the data being sent through the network, once it reaches the destination TCP sends an acknowledgement flag to the sender confirming that all packets have been received. However, if for any reason some of the packets didn’t arrive, then TCP will not send the acknowledgement and after a certain period of time the sender will re-transmit these packages until the delivery has been acknowledged.</p>
-            </div>
-            <div  class="col-sm-5 col-md-6">
-                <img src="Images/tcp.png" class="w-75" alt="TCP">
+                <p><br/>However, when you are visiting a website, you are not always just requesting information. Sometimes you are also sending it via a form or a survey. Whenever you send information to a server you are actually sending an HTTP POST request. For example, when you enter your login information in a website, you send a POST request to the server with your login data.</p>
             </div>
           </div>
           <p></br></p>
+          <p class="h3"><br/>Cookies</p>
+          <p>Let’s continue with the login example, when the server replies to the client after confirming the authentication, it also sends a cookie, which your browser stores in order to remember who you are and what access you have within that website. In other words, this cookie acts like an ID card.</p>
+          <p class="h3"><br/>HTTPS</p>
+          <p>As you already know, the internet is open to the public, it shares connections and the information sent within these connections is in plain text.This enables hackers to be able see the information you send over the internet. In order to prevent this, websites request your browser to communicate in a secure channel using the <b><i>Secure Socket Layer (SSL)</i></b> and its successor <b><i>Transport Layer Security (TLS)</i></b>. HTTPS, also known as <b><i>HyperText Transfer Protocol Secure</i></b>, is basically the HTTP protocol using the SSL & TLS protocols to encrypt your data communications when navigating through the web. </p>
+          <p class="h3"><br/>Certificates</p>
+          <p>When a website asks your browser to establish a secure connection, it provides a certificate that proves its authenticity. A certificate is generated by a <b><i>Certificate Authority (CA)</i></b>. CAs are trusted entities that verify the identity of a website. Similarly to the government verifying your identity by providing a license.</p>
+          <div class="text-center">
+            <img src="Images/https.png" class="w-75" alt="HTTPS">
+          </div>
         </div>
+        <p></br></p>
     </div>
 
 
