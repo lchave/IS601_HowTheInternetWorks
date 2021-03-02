@@ -30,12 +30,12 @@
                       Topics
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="dropdown-item" href="Packets_Routing.html">Packets & Routing</a></li>
-                      <li><a class="dropdown-item" href="DomainNames_ICANN.html">Domain Names & ICANN</a></li>
+                      <li><a class="dropdown-item" href="PacketsRouting.html">Packets & Routing</a></li>
+                      <li><a class="dropdown-item" href="DomainNamesICANN.html">Domain Names & ICANN</a></li>
                       <li><a class="dropdown-item" href="IPAddress.html">IP Address</a></li>
                       <li><a class="dropdown-item" href="DNS.html">Domain Name System (DNS)</a></li>
-                      <li><a class="dropdown-item" href="HTTP_HTTPS.html">HTTP\HTTPS</a></li>
-                      <li><a class="dropdown-item" href="HTML_CSS.html">HTML & CSS</a></li>
+                      <li><a class="dropdown-item" href="HTTPHTTPS.html">HTTP\HTTPS</a></li>
+                      <li><a class="dropdown-item" href="HTMLCSS.html">HTML & CSS</a></li>
                       <li><a class="dropdown-item" href="W3C.html">W3C</a></li>
                     </ul>
                   </li>
@@ -52,37 +52,32 @@
 
     <div class="container align-content-center">
         <div>
-          <p class="h2 text-center"></br>The Internet - Packets, Routing, and Reliability</p>
+          <p class="h2 text-center"></br>The Internet - IP Addresses</p>
           <p><br/></p>
-          <p>The internet is formed by multiple independent networks connected to each other. There are also multiple ways of transmitting data within the internet, however, what is the actual process in order to send and receive such data?</p>
-          <p class="h3"><br/>Packets</p>
+          <p>All the devices connected to the internet have an address. An address on the internet is represented by a number that is unique to each device on the network. A computer’s address is called an IP address. When you send a message from one computer to another, you need its IP address and within the message you also need the sender's IP address so that the remote computer knows where to respond.</p>
+          <p class="h3"><br/>IPv4</p>
           <div class="row">
             <div class="col-sm-5 col-md-6">
-                <p><br/>Any type of digital information in the internet is sent via packets. A packet contains the information you would like to send along with the destination IP address and a source IP address. Just like all the data in the internet a packet is formed by bits, however, there might be files that you would like to share that are too big in order to fit in a single packet, therefore, this data is chopped into multiple packets and sent through the network. Whenever the packets arrive at the destination, they are sorted out and put together in order to reconstruct the original data. Information on the internet does not need to follow a fixed path. When a packet is sent, it could take a completely different route to reach its destination every single time.</p>
+                <p><br/>In 1973, the Internet Protocol version 4 (IPv4) was designed. Like all digital data, an IPv4 address is represented in binary code. To be more precise, an IPv4 address is represented by 32 bits divided into four octets. The first octet usually represents the country of the network, followed by the region, subnetwork and then the device address. IPv4 provides for more than 4 billion unique addresses, however, due to the popularity of the internet; this amount of IP addresses won’t be enough.</p>
             </div>
             <div  class="col-sm-5 col-md-6">
-                <img src="Images/packets.png" class="w-75" alt="Packets">
+                <img src="Images/ipv4.png" class="w-75" alt="Packets">
             </div>
           </div>
-          <p class="h3"><br/>Routers</p>
+          <p class="h3"><br/>IPv6</p>
           <div class="row">
             <div  class="col-sm-5 col-md-6">
-                <img src="Images/routers.png" class="w-75" alt="Packets">
+                <img src="Images/ipv6.png" class="w-75" alt="Packets">
             </div>
             <div class="col-sm-5 col-md-6">
-                <p><br/>Routers are special computers that act like traffic managers and keep packets moving through the internet. A router keeps track of multiple routes for sending packets, when the network is congested routers might change the path that a packet is following in order to ensure it reaches the destination. This decision is made by choosing the cheapest available route for each packet, cheapest meaning the path that will take the shortest time and also considering the known routes.</p>
-            </div>
-          </div>
-          <p class="h3"><br/>Reliability</p>
-          <div class="row">
-            <div class="col-sm-5 col-md-6">
-                <p><br/>Due to its distributed design, the internet is fault tolerant. Even if one of the paths to transmit data fails then the data can still reach its destination by following a different path. Along with this distributed design, there are also other protocols that ensure the reliability of the data being sent and received, like the Transmission Control Protocol (TCP). TCP keeps track of all the data being sent through the network, once it reaches the destination TCP sends an acknowledgement flag to the sender confirming that all packets have been received. However, if for any reason some of the packets didn’t arrive, then TCP will not send the acknowledgement and after a certain period of time the sender will re-transmit these packages until the delivery has been acknowledged.</p>
-            </div>
-            <div  class="col-sm-5 col-md-6">
-                <img src="Images/tcp.png" class="w-75" alt="Packets">
+                <p><br/>In order to solve this problem a new version of the Internet Protocol has been developed, IPv6. An IPv6 address uses 128 bits, which provides 340 undecillion unique addresses. Nonetheless, it will be a slow and multi-year transition from IPv4 to IPv6.</p>
             </div>
           </div>
           <p></br></p>
+        </div>
+        <p>Below you can see a comparison between an IPv4 vs. IPv6 packet</p>
+        <div class="text-center">
+          <img src="Images/cisco-ipv6-tutorial-6-728.jpg" class="w-75" alt="IPv4vsIPv6">
         </div>
     </div>
 
